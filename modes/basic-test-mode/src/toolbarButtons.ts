@@ -64,7 +64,7 @@ const toolbarButtons: Button[] = [
         createButton({
           id: 'Length',
           icon: 'tool-length',
-          label: 'Length',
+          label: 'LL',
           tooltip: 'Length Tool',
           commands: setToolActiveToolbar,
           evaluate: 'evaluate.cornerstoneTool',
@@ -88,7 +88,7 @@ const toolbarButtons: Button[] = [
         createButton({
           id: 'EllipticalROI',
           icon: 'tool-ellipse',
-          label: 'Ellipse',
+          label: 'El',
           tooltip: 'Ellipse ROI',
           commands: setToolActiveToolbar,
           evaluate: 'evaluate.cornerstoneTool',
@@ -163,7 +163,7 @@ const toolbarButtons: Button[] = [
         _createWwwcPreset(2, 'Lung', '1500 / -600'),
         _createWwwcPreset(3, 'Liver', '150 / 90'),
         _createWwwcPreset(4, 'Bone', '2500 / 480'),
-        _createWwwcPreset(5, 'Brain', '80 / 40'),
+        _createWwwcPreset(5, 'Brain', '70 / 40'),
       ],
     },
   },

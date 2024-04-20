@@ -19,7 +19,7 @@ import { Command, Commands, ComplexCommand } from '../types/Command';
  * to extend this class, please check it's source before adding new methods.
  */
 export class CommandsManager {
-  constructor({} = {}) {
+  constructor({ } = {}) {
     this.contexts = {};
   }
 

@@ -119,6 +119,7 @@ export {
   ViewportActionCorners,
   ViewportActionCornersLocations,
   ViewportDownloadForm,
+  ViewportAIDisplay,
   ViewportGrid,
   ViewportPane,
   WindowLevel,

@@ -104,7 +104,7 @@ const toolbarButtons: Button[] = [
           tooltip: 'Livewire tool',
           commands: setToolActiveToolbar,
           evaluate: 'evaluate.cornerstoneTool',
-        }),
+        })
       ],
     },
   },
@@ -162,6 +162,16 @@ const toolbarButtons: Button[] = [
       icon: 'tool-capture',
       label: 'Capture',
       commands: 'showDownloadViewportModal',
+      evaluate: 'evaluate.action',
+    },
+  },
+  {
+    id: 'runAI',
+    uiType: 'ohif.radioGroup',
+    props: {
+      icon: 'tool-ai',
+      label: 'AI classification',
+      commands: 'runAI',
       evaluate: 'evaluate.action',
     },
   },

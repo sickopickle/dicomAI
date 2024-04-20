@@ -91,6 +91,7 @@ import prevArrow from './../../assets/icons/prev-arrow.svg';
 import viewportStatusTracked from './../../assets/icons/viewport-status-tracked.svg';
 
 /** Tools */
+import toolAI from './../../assets/icons/tool-ai.svg';
 import toggleDicomOverlay from './../../assets/icons/tool-toggle-dicom-overlay.svg';
 import toolZoom from './../../assets/icons/tool-zoom.svg';
 import toolCapture from './../../assets/icons/tool-capture.svg';
@@ -302,6 +303,7 @@ const ICONS = {
   'toggle-dicom-overlay': toggleDicomOverlay,
   'tool-zoom': toolZoom,
   'tool-capture': toolCapture,
+  'tool-ai': toolAI,
   'tool-layout': toolLayout,
   'tool-more-menu': toolMore,
   'tool-move': toolMove,

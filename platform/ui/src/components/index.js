@@ -60,6 +60,7 @@ import TooltipClipboard from './TooltipClipboard';
 import Typography from './Typography';
 import Viewport from './Viewport';
 import ViewportDownloadForm from './ViewportDownloadForm';
+import ViewportAIDisplay from './ViewportAIDisplay';
 import ViewportGrid from './ViewportGrid';
 import ViewportPane from './ViewportPane';
 import WindowLevel from './WindowLevel';
@@ -184,6 +185,7 @@ export {
   ViewportActionCorners,
   ViewportActionCornersLocations,
   ViewportDownloadForm,
+  ViewportAIDisplay,
   ViewportGrid,
   ViewportPane,
   ViewportOverlay,

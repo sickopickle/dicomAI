@@ -54,6 +54,7 @@ const DicomTagBrowser = ({ displaySets, displaySetInstanceUID }) => {
       const dateStr = `${SeriesDate}:${SeriesTime}`.split('.')[0];
       const date = moment(dateStr, 'YYYYMMDD:HHmmss');
       const displayDate = date.format('ddd, MMM Do YYYY');
+      console.log("breh");
 
       return {
         value: displaySetInstanceUID,

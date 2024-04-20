@@ -101,6 +101,7 @@ function modeFactory({ modeConfiguration }) {
         'TrackballRotate',
         'WindowLevel',
         'Capture',
+        'runAI',
         'Layout',
         'Crosshairs',
         'MoreTools',

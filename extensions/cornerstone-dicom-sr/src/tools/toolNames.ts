@@ -11,6 +11,7 @@ const toolNames = {
   SRCobbAngle: 'SRCobbAngle',
   SRRectangleROI: 'SRRectangleROI',
   SRPlanarFreehandROI: 'SRPlanarFreehandROI',
+  //runAI: 'runAI',
 };
 
 export default toolNames;

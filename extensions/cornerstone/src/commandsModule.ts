@@ -16,12 +16,14 @@ import { Types as OhifTypes } from '@ohif/core';
 import { vec3, mat4 } from 'gl-matrix';
 
 import CornerstoneViewportDownloadForm from './utils/CornerstoneViewportDownloadForm';
+import ViewportAIDisplay from './utils/CornerstoneViewportAIDisplay';
 import { callLabelAutocompleteDialog, showLabelAnnotationPopup } from './utils/callInputDialog';
 import toggleImageSliceSync from './utils/imageSliceSync/toggleImageSliceSync';
 import { getFirstAnnotationSelected } from './utils/measurementServiceMappings/utils/selection';
 import getActiveViewportEnabledElement from './utils/getActiveViewportEnabledElement';
 import { CornerstoneServices } from './types';
 import toggleVOISliceSync from './utils/toggleVOISliceSync';
+import axios from 'axios';
 
 const toggleSyncFunctions = {
   imageSlice: toggleImageSliceSync,
@@ -408,6 +410,28 @@ function commandsModule({
           },
         });
       }
+    },
+    runAI: async () => {
+      const { activeViewportId } = viewportGridService.getState();
+      const { uiModalService } = servicesManager.services;
+      if (uiModalService) {
+        uiModalService.show({
+          content: ViewportAIDisplay,
+          title: 'Running AI Classification',
+          contentProps: {
+            activeViewportId,
+            onClose: uiModalService.hide,
+            cornerstoneViewportService,
+          },
+        });
+      }
+      const url = "https://vimguard-extension-19160d1af503.herokuapp.com/run_lung_ct_model"
+      /*try {
+        const response = await axios.get(url);
+        console.log(response.data.data)
+      } catch (exception) {
+        process.stderr.write(`ERROR received from ${url}: ${exception}\n`);
+      }*/
     },
     rotateViewport: ({ rotation }) => {
       const enabledElement = _getActiveViewportEnabledElement();
@@ -934,6 +958,9 @@ function commandsModule({
     },
     showDownloadViewportModal: {
       commandFn: actions.showDownloadViewportModal,
+    },
+    runAI: {
+      commandFn: actions.runAI,
     },
     toggleCine: {
       commandFn: actions.toggleCine,
