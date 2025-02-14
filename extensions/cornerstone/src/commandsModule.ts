@@ -433,6 +433,11 @@ function commandsModule({
         process.stderr.write(`ERROR received from ${url}: ${exception}\n`);
       }*/
     },
+    goToSlice: () => {
+      console.log("bruh");
+      commandsManager.runCommand('jumpToImage', {imageIndex:10});
+      // jumps to the 10th slice, will later modify to jump to the slice where the detection is at
+    },
     rotateViewport: ({ rotation }) => {
       const enabledElement = _getActiveViewportEnabledElement();
       if (!enabledElement) {
@@ -945,6 +950,9 @@ function commandsModule({
       commandFn: actions.scroll,
       options: { direction: -1 },
     },
+    scroll: {
+      commandFn: actions.scroll,
+    },
     firstImage: {
       commandFn: actions.jumpToImage,
       options: { imageIndex: 0 },
@@ -961,6 +969,9 @@ function commandsModule({
     },
     runAI: {
       commandFn: actions.runAI,
+    },
+    goToSlice: {
+      commandFn: actions.goToSlice,
     },
     toggleCine: {
       commandFn: actions.toggleCine,

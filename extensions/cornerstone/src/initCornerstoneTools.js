@@ -40,6 +40,7 @@ import {
 
 import CalibrationLineTool from './tools/CalibrationLineTool';
 import ImageOverlayViewerTool from './tools/ImageOverlayViewerTool';
+import BoundingBoxTool from './tools/BoundingBoxTool';
 
 export default function initCornerstoneTools(configuration = {}) {
   CrosshairsTool.isAnnotation = false;
@@ -76,6 +77,7 @@ export default function initCornerstoneTools(configuration = {}) {
   addTool(CalibrationLineTool);
   addTool(TrackballRotateTool);
   addTool(ImageOverlayViewerTool);
+  addTool(BoundingBoxTool);
   addTool(AdvancedMagnifyTool);
   addTool(UltrasoundDirectionalTool);
   addTool(PlanarFreehandROITool);
@@ -129,6 +131,7 @@ const toolNames = {
   RectangleScissors: RectangleScissorsTool.toolName,
   SphereScissors: SphereScissorsTool.toolName,
   ImageOverlayViewer: ImageOverlayViewerTool.toolName,
+  BoundingBoxTool: BoundingBoxTool.toolName,
   AdvancedMagnify: AdvancedMagnifyTool.toolName,
   UltrasoundDirectional: UltrasoundDirectionalTool.toolName,
   SplineROI: SplineROITool.toolName,

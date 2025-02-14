@@ -92,6 +92,7 @@ import viewportStatusTracked from './../../assets/icons/viewport-status-tracked.
 
 /** Tools */
 import toolAI from './../../assets/icons/tool-ai.svg';
+import toolBoundingBox from './../../assets/icons/tool-bounding-box.svg';
 import toggleDicomOverlay from './../../assets/icons/tool-toggle-dicom-overlay.svg';
 import toolZoom from './../../assets/icons/tool-zoom.svg';
 import toolCapture from './../../assets/icons/tool-capture.svg';
@@ -304,6 +305,7 @@ const ICONS = {
   'tool-zoom': toolZoom,
   'tool-capture': toolCapture,
   'tool-ai': toolAI,
+  'tool-bounding-box' : toolBoundingBox,
   'tool-layout': toolLayout,
   'tool-more-menu': toolMore,
   'tool-move': toolMove,

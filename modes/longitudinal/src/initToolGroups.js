@@ -260,6 +260,22 @@ function initVolume3DToolGroup(extensionManager, toolGroupService) {
   toolGroupService.createToolGroupAndAddTools('volume3d', tools);
 }
 
+function initAIToolGroup(extensionManager, toolGroupService, commandsManager) {
+  const utilityModule = extensionManager.getModuleEntry(
+    '@ohif/extension-cornerstone.utilityModule.tools'
+  );
+
+
+  const { toolNames, Enums } = utilityModule.exports;
+  
+  const tools ={ enabled: [{ toolName: 'BoundingBoxTool'}]
+  };
+
+  // add rectangle overlay tool to the default tool group
+  toolGroupService.addToolsToToolGroup('default', tools);
+
+}
+
 function initToolGroups(extensionManager, toolGroupService, commandsManager, modeLabelConfig) {
   initDefaultToolGroup(
     extensionManager,
@@ -268,6 +284,7 @@ function initToolGroups(extensionManager, toolGroupService, commandsManager, mod
     'default',
     modeLabelConfig
   );
+  initAIToolGroup(extensionManager, toolGroupService, commandsManager);
   initSRToolGroup(extensionManager, toolGroupService, commandsManager);
   initMPRToolGroup(extensionManager, toolGroupService, commandsManager, modeLabelConfig);
   initVolume3DToolGroup(extensionManager, toolGroupService);

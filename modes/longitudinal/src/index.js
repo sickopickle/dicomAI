@@ -102,6 +102,7 @@ function modeFactory({ modeConfiguration }) {
         'WindowLevel',
         'Capture',
         'runAI',
+        'goToSlice',
         'Layout',
         'Crosshairs',
         'MoreTools',

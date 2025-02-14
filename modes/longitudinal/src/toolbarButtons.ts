@@ -176,6 +176,26 @@ const toolbarButtons: Button[] = [
     },
   },
   {
+    id: 'BoundingBoxTool',
+    uiType: 'ohif.radioGroup',
+    props: {
+      icon: 'toggle-dicom-overlay',
+      label: 'AI Nodule Detection',
+      commands: 'toggleEnabledDisabledToolbar',
+      evaluate: 'evaluate.cornerstoneTool.toggle',
+    },
+  },
+  {
+    id: 'goToSlice',
+    uiType: 'ohif.radioGroup',
+    props: {
+      icon: 'tool-bounding-box',
+      label: 'AI Detection',
+      commands: 'goToSlice',
+      evaluate: 'evaluate.action',
+    },
+  },
+  {
     id: 'Layout',
     uiType: 'ohif.layoutSelector',
     props: {

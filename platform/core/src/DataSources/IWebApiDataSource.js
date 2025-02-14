@@ -61,7 +61,7 @@ function create({
   const defaultReject = {};
 
   const defaultGetConfig = () => {
-    return { dicomUploadEnabled: false };
+    return { dicomUploadEnabled: true };
   };
 
   return {

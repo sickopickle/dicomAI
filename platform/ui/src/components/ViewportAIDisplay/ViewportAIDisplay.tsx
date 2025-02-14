@@ -59,6 +59,7 @@ const ViewportAIDisplay = ({
         </Typography>
       )}
     </div>
+
   );
 };
 
